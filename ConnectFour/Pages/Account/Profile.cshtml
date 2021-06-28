@@ -1,0 +1,51 @@
+﻿@page
+@model ProfileModel
+
+@*<div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="PlayerNickName" class="control-label">VictoryRatio</label>
+        <input asp-for="PlayerNickName" class="form-control" />
+        <span asp-validation-for="PlayerNickName" class="text-danger"></span>
+    </div>*@
+<div class="Page">
+    <h4>Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4 col-lg-2">NickName</dt>
+        <dd class="col-sm-8 col-lg-10">
+            @Html.DisplayFor(model => model.PlayerNickName)
+        </dd>
+        <dt class="col-sm-4 col-lg-2">Defeats</dt>
+        <dd class="col-sm-8 col-lg-10">
+            @Html.DisplayFor(model => model.NumberDefeats)
+        </dd>
+        <dt class="col-sm-4 col-lg-2">Victories</dt>
+        <dd class="col-sm-8 col-lg-10">
+            @Html.DisplayFor(model => model.NumberVictories)
+        </dd>
+        <dt class="col-sm-4 col-lg-2">Draws</dt>
+        <dd class="col-sm-8 col-lg-10">
+            @Html.DisplayFor(model => model.NumberDraw)
+        </dd>
+        <dt class="col-sm-4 col-lg-2">Record</dt>
+        <dd class="col-sm-8 col-lg-10">
+            @if (Model.Record == 0)
+            {
+                <p>-</p>
+            }
+            else
+            {
+                @Html.DisplayFor(model => model.Record)
+            }
+
+        </dd>
+        <dt class="col-sm-4 col-lg-2">Total Games</dt>
+        <dd class="col-sm-8 col-lg-10">
+            @Html.DisplayFor(model => model.TotalGames)
+        </dd>
+        <dt class="col-sm-4 col-lg-2">Victory Ratio</dt>
+        <dd class="col-sm-8 col-lg-10">
+            @Html.DisplayFor(model => model.VictoryRatio)
+        </dd>
+    </dl>
+</div>

@@ -1,0 +1,84 @@
+﻿* {
+    font-family: 'Prompt', sans-serif;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    background: #383838;
+    color: #ffffff;
+}
+
+.Page {
+    min-height: calc(100vh - 80.5px);
+    height:100%;
+    padding: 1rem 0;
+}
+
+.centeredContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+#main-logo {
+    width: 100px;
+    height: auto;
+}
+
+header {
+    background-color: #00000052;
+}
+
+.pageVhSeparation--top{
+    margin-top: 10vh;
+}
+
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    position: relative;
+}
+
+.navbar-light .navbar-nav .nav-link:after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    height: 0.2em;
+    width: 0;
+    background-color: #ffffff;
+    transition: 0.2s;
+}
+
+    .navbar-light .navbar-nav .nav-link:hover:after, .navbar-light .navbar-nav .nav-link.active:after {
+        width: 100%;
+    }
+
+.navbar-expand-sm .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: .5rem;
+    margin-left: .5rem;
+}
+
+.navbar-light .navbar-toggler {
+    color: white;
+    border-color: transparent;
+}

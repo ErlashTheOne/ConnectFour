@@ -1,0 +1,79 @@
+﻿.button, input[type="submit"] {
+    background: transparent;
+    padding: 0.2rem 1rem 0.1rem;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    display: inline-block;
+}
+
+.button--reverse {
+    border: 2px solid #2b2b2b;
+    color: #2b2b2b !important;
+    width: fit-content;
+}
+
+.button:hover, input[type="submit"]:hover, a.button:not([href]):not([tabindex]):hover {
+    background: #ffffff;
+    color: #2b2b2b;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: #2b2b2b;
+    background-color: white;
+    border-color: white;
+}
+
+.button--reverse:hover {
+    background: #2b2b2b !important;
+    color: #ffffff !important;
+}
+
+input[type="text"], input[type="number"], input[type="password"], input[type="email"] {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 0;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="email"]:focus, .button:focus, input[type="submit"]:focus, button {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: white;
+    outline: 0;
+    box-shadow: none;
+}
+
+.no-input {
+    background: transparent;
+    display: inline-block;
+    width: 155px;
+    border: none!important;
+    padding: 0;
+}
+
+.no-button {
+    background: transparent;
+    display: inline-block;
+    border: none;
+    padding: 0;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+#joinForm {
+    display: flex;
+    flex-direction: column;
+}

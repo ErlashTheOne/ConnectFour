@@ -1,0 +1,12 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+@import url("base.css");
+@import url("formsAndButtons.css");
+@import url("loader.css");
+@import url("modal.css");
+@import url("tooltip.css");
+@import url("site.css");
+
+/*pages*/
+@import url("pages/createJoin.css");
+@import url("pages/game.css");

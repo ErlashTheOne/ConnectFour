@@ -1,0 +1,123 @@
+﻿@page 
+<div class="gamePage Page">
+    <div class="superiorContainer">
+        <div class="gameNav">
+            <div class="lobbyId">
+                <h2>ID: <input class="no-input" type="text" id="roomId" onkeypress="this.style.width = ((this.value.length + 1) * 22) + 'px';"></h2>
+                <div class="customTooltip">
+                    <button class="no-button" onclick="copyToClipboard()" onmouseout="outFunc()">
+                        <span class="customTooltipText" id="myTooltip">Copy to clipboard</span>
+                        <i class="fas fa-paste"></i>
+                    </button>
+                </div>
+
+            </div>
+            <div class="gameInformation" style="display:none;">
+                @*@if (User.Identity.IsAuthenticated)
+        {
+            <div>
+                <img src="" />
+                <h2>Rival: <span id="rivalVictoryCont"></span></h2>
+            </div>
+            <div>
+                <img src="" />
+                <h2>You: <span id="userVictoryCont"></span></h2>
+            </div>
+        }*@
+                <div>
+                    <h2>   <span id="userCountDown"></span></h2>
+                </div>
+            </div>
+            <i id="xButton" class="far fa-times-circle fa-2x goBackButton"></i>
+        </div>
+
+    </div>
+    <div class="mediumContainer">
+        <div class="gameBoard-container">
+            <div style="display: inline-block; margin: auto;">
+                <div id="loader"><div></div>Loading...</div>
+                <div class="TurnDisplay" id="YourTurn" style="display: none;">It is your turn <span></span></div>
+                <div class="TurnDisplay" id="EnemyTurn" style="display: none;">Waiting rival's move <span></span></div>
+                <div class="gameBoard" style="display:none;">
+
+                    <div class="column">
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                    </div>
+
+                    <div class="column">
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                    </div>
+
+                    <div class="column">
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                    </div>
+
+                    <div class="column">
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                    </div>
+
+                    <div class="column">
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                    </div>
+
+                    <div class="column">
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                    </div>
+                    <div class="column">
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <h2 id="result"></h2>
+        <a onclick="goBack()" class="button button--reverse goBackButton">Exit</a>
+    </div>
+
+</div>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/game.js"></script>
+<script src="~/js/modal.js"></script>

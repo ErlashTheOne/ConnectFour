@@ -1,0 +1,26 @@
+﻿.createJoinPage {
+    text-align: center;
+}
+
+.createJoinPage input[type="text"], .createJoinPage .button {
+    width: 180px;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-align: center;
+}
+
+
+.createJoinPage input[type="text"]::-webkit-input-placeholder {
+    text-align: center;
+}
+
+.createJoinPage input[type="text"]:-moz-placeholder {
+}
+
+.createJoinPage input[type="text"]::-moz-placeholder {
+    text-align: center;
+}
+
+.createJoinPage input[type="text"]:-ms-input-placeholder {
+    text-align: center;
+}
